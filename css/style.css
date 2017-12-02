@@ -1,0 +1,120 @@
+
+
+html, body
+{
+
+	background-color:black;
+	color:#ca7ef7;
+	/*color:black;*/
+}
+
+h1, h2, h3, h4
+{
+	color:#ff4ced;
+}
+
+/*h1, h2, h3, h4
+{
+	color:black;
+}*/
+
+h1
+{
+	font-size:1.8em;
+}
+
+
+/*Nav Menu*/
+
+#navList
+{
+	display:inline-block;
+	width:100%;
+	height:100px;
+}
+
+ul#navList
+{
+	float:top;
+	list-style-type: none;
+}
+
+ul#navList li
+{
+	float:left;
+	margin-left:3%;
+	margin-right:3%;
+	margin-top:3%;
+}
+
+ul#navList a:link
+{
+	color:#3caff2;
+	text-decoration:none;
+}
+
+ul#navList a:visited
+{
+	color:#2190d1;
+	text-decoration:none;
+}
+
+ul#navList a:hover
+{
+	color:#bf37ce;
+	text-decoration:none;
+}
+
+ul#navList a:active
+{
+	color:#bf37ce;
+	text-decoration:none;
+}
+
+/*General*/
+
+.container
+{
+	width:80%;
+	margin-left:10%;
+}
+
+/*homepage*/
+
+#section1Home, #section2Home
+{
+	width:49%;
+	display:inline-block;
+	vertical-align:top;
+	/*border:solid 1px white;*/
+}
+
+#homeImage
+{
+	width:50%;
+	margin-left:25%;
+	border:solid 2px white;
+	border-radius:20px;
+}
+
+#textSection1
+{
+	margin-left:5%;
+}
+
+
+
+/*Events*/
+
+#lineupsCol1, #lineupsCol2
+{
+	width:49%;
+	display:inline-block;
+	vertical-align:top;
+}
+
+.lineupLists
+{
+	text-decoration:none;
+	list-style:none;
+}
