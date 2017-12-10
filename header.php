@@ -18,7 +18,7 @@
 
  <!-- SCRIPTS -->
     <!-- JQuery -->
-    
+<script src="scripts/jquery-3.2.1.js"></script>    
     
   
 
