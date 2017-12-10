@@ -1,4 +1,159 @@
+/*animations*/
 
+/*banner*/
+@keyframes rotateBanner {
+	0% {transform:rotate(0deg);}
+	25% {transform:rotate(-20deg);}
+	50% {transform:rotate(0deg);}
+	75% {transform:rotate(20deg);}
+	100% {transform:rotate(0deg);}
+}
+
+@keyframes-moz- rotateBanner {
+	0% {transform:rotate(0deg);}
+	25% {transform:rotate(-20deg);}
+	50% {transform:rotate(0deg);}
+	75% {transform:rotate(20deg);}
+	100% {transform:rotate(0deg);}
+}
+
+@keyframes-webkit- rotateBanner {
+	0% {transform:rotate(0deg);}
+	25% {transform:rotate(-20deg);}
+	50% {transform:rotate(0deg);}
+	75% {transform:rotate(20deg);}
+	100% {transform:rotate(0deg);}
+}
+
+@keyframes-o- rotateBanner {
+	0% {transform:rotate(0deg);}
+	25% {transform:rotate(-20deg);}
+	50% {transform:rotate(0deg);}
+	75% {transform:rotate(20deg);}
+	100% {transform:rotate(0deg);}
+}
+
+#homeBannerImage
+{
+	animation-name: rotateBanner;
+	animation-duration: 7s;
+}
+
+/*.divAnimate, .imageAnimate
+{
+	animation-name: rotateBanner;
+	animation-duration: 10s;
+}*/
+
+/*techno*/
+
+@keyframes technoAnimate {
+	0% {display:inline-block;transform:translate(0px,0px);}
+	25% {transform:translate(50px,50px);}
+	50% {transform:translate(0px,50px);}
+	75% {transform:translate(-50px,-100px);}
+	99% {transform:translate(0px,0px);}
+	100% {display:none;}
+}
+
+#homeTechno
+{
+	animation-name:technoAnimate;
+	animation-duration:21s;
+	animation-delay:9s;
+	animation-iteration-count:infinite;
+}
+
+@keyframes techHouseAnimate {
+	0% {display:inline-block;transform:translate(0px,0px);}
+	25% {transform:translate(-100px,20px);}
+	50% {transform:translate(-150px,50px);}
+	75% {transform:translate(-50px,50px);}
+	99% {transform:translate(0px,0px);}
+	100% {display:none;}
+}
+
+
+
+#homeTechHouse
+{
+	animation-name:techHouseAnimate;
+	animation-duration:20s;
+	animation-delay:8s;
+	animation-iteration-count:infinite;
+}
+
+
+@keyframes tribalAnimate {
+	0% {display:inline-block;transform:translate(0px,0px);}
+	25% {transform:translate(100px,100px);}
+	50% {transform:translate(200px,50px);}
+	75% {transform:translate(100px,100px);}
+	99% {transform:translate(0px,0px);}
+	100% {display:none;}
+}
+
+
+#homeTribal
+{
+	animation-name:tribalAnimate;
+	animation-duration:21s;
+	animation-delay:6s;
+	animation-iteration-count:infinite;
+}
+
+@keyframes houseAnimate {
+	0% {display:inline-block;transform:translate(0px,0px);}
+	25% {transform:translate(-50px,70px);}
+	50% {transform:translate(50px,150px);}
+	75% {transform:translate(100px,100px);}
+	99% {transform:translate(0px,0px);}
+	100% {display:none;}
+}
+
+#homeHouse
+{
+	animation-name:houseAnimate;
+	animation-duration:19s;
+	animation-delay:7s;
+	animation-iteration-count:infinite;
+}
+
+@keyframes psytranceAnimate {
+	0% {display:inline-block;transform:translate(0px,0px);}
+	25% {transform:translate(50px,-100px);}
+	50% {transform:translate(75px,-150px);}
+	75% {transform:translate(100px,-200px);}
+	99% {transform:translate(0px,0px);}
+	100% {display:none;}
+}
+
+#homePsytrance
+{
+	animation-name:psytranceAnimate;
+	animation-duration:22s;
+	animation-delay:9s;
+	animation-iteration-count:infinite;
+}
+
+@keyframes deepHouseAnimate {
+	0% {display:inline-block;transform:translate(0px,0px);}
+	25% {transform:translate(-100px,-150px);}
+	50% {transform:translate(-50px,-250px);}
+	75% {transform:translate(50px,-100px);}
+	99% {transform:translate(0px,0px);}
+	100% {display:none;}
+}
+
+#homeDeepHouse
+{
+	animation-name:deepHouseAnimate;
+	animation-duration:20s;
+	animation-delay:8s;
+	animation-iteration-count:infinite;
+}
+
+/*General*/
 
 html, body
 {
@@ -102,6 +257,36 @@ ul#navList a:active
 	margin-left:5%;
 }
 
+#homeBannerImage
+{
+	width:60%;
+	margin-left:20%;
+}
+
+.genres
+{
+	/*display:none;*/
+}
+
+/*About*/
+
+.aboutImages
+{
+	display:inline-block;
+	padding:10px;
+}
+
+#aboutImg1
+{
+	width:10%;
+	float:left;
+}
+
+#aboutImg2
+{
+	width:15%;
+	float:right;
+}
 
 
 /*Events*/
@@ -117,4 +302,68 @@ ul#navList a:active
 {
 	text-decoration:none;
 	list-style:none;
+}
+
+
+/*DJs*/
+
+.djsDiv
+{
+	width:100%;
+}
+
+.oneDJDiv
+{
+	width:30%;
+	margin-left:2%;
+	margin-bottom:10px;
+	display:inline-block;
+	vertical-align:top;
+}
+
+.oneDJImg
+{
+	width:70%;
+	margin-left:15%;
+}
+
+/*Contact*/
+
+#contactContactFormDiv
+{
+	width:60%;
+	margin-left:20%;
+	margin-bottom:50px;
+}
+
+.formInputClass
+{
+	width:60%;
+	margin-bottom:5px;
+}
+
+.formLabelClass
+{
+	margin-bottom:7px;
+}
+
+#contactSocialMediaRow
+{
+	width:50%;
+	margin-left:25%;
+}
+
+.contactSocialMediaColumn
+{
+	width:30%;
+	display:inline-block;
+	vertical-align:top;
+	margin-left:1%;
+}
+
+.contactSocialMediaImgs
+{
+	width:50%;
+	margin-left:25%;
+	border-radius:10px;
 }
