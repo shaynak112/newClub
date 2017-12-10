@@ -11,7 +11,7 @@ include 'header.php';
 <div id='container'>
 <h1>About Portal</h1>
 
-<p>An idea curated by local DJs who have been involved in the scene for years.</p>
+<p><img src='images/aboutVenue.jpg' class='aboutImages' id='aboutImg1'>An idea curated by local DJs who have been involved in the scene for years.<img src='images/aboutVenue2.jpg' class='aboutImages' id='aboutImg2'></p>
 
 <p>Located at: address</p>
 

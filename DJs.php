@@ -9,9 +9,10 @@ include 'header.php';
 <body>
 
 <div id='container'>
-<h1>DJS</h1>
+<h1>DJs</h1>
 
 <p>Toronto has many talented and unique DJs who spin a variety of styles.</p>
+<p>this will be based on a database</p>
 
 <div id='djsDiv'>
 
