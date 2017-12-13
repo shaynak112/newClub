@@ -1,6 +1,9 @@
-<?php
+<?php $pjGroup = "1";
+ include '/home/dh_ev2582/findersoftheuniverse.com/portal/test/scripts/app/views/pjLayouts/pjActionProtect.php'; ?>
 
-//include 'dbConnect.php';
+ <?php
+
+include 'dbConnect.php';
 include 'nav.php';
 include 'header.php';
 
@@ -42,13 +45,13 @@ include 'header.php';
 
 
 
-<!--<?php
-/*
+<?php
+
 if(isset($_POST['subscribePortal']))
 {
 
   /*if email is already in there*/
-/*
+
   $firstName = $_POST['firstName'];
   $lastName = $_POST['lastName'];
   $email = $_POST['email'];
@@ -57,8 +60,9 @@ if(isset($_POST['subscribePortal']))
 
   $conn = new Dbconnect;
   $db = $conn->getDb();
-
-  $query = "INSERT INTO subscribe (firstName, lastName, email, subscribe) VALUES (:firstName, :lastName, :email,'subscribed')";
+ 
+  
+    $query = "INSERT INTO subscribe (subscribeFirstName, subscribeLastName, subscribeEmail, subscribed) VALUES (:firstName, :lastName, :email,'yes')";
 
     $statement = $db->prepare($query);
 
@@ -72,20 +76,61 @@ if(isset($_POST['subscribePortal']))
 
       echo "Thank you, {$firstName}, for joining our newsletter.";
       echo "</div>";
-
 }
-*/
 
-?>-->
+?>
 
 
+</div><!-- end form div-->
+
+<br/><br/><br/><br/><br/>
+
+<div>To unsubscribe, enter your email below</div>
+
+<div><!--unsubscribe div-->
+
+<form name="unsubscribeForm" class="form-horizontal" method="post" action="">
+
+  <div>
+<label class="control-label" for="UNemail">Your email:  </label>
+  <input id="UNemail" type="text" class="form-control" placeholder="Enter your email" name="UNemail"/>
 </div>
 
 
+<br/>
 
-</div>
+  <input type="submit" class="btn btn-primary" value="Unsubscribe to Portal's Newsletter" name="unsubscribePortal" id="unsubscribePortal"/>
+
+  </form>
 
 
+<?php
+
+  if(isset($_POST['unsubscribePortal']))
+  {
+
+    $UNemail = $_POST['UNemail'];
+
+    $conn2 = new Dbconnect;
+    $db2 = $conn2->getDb();
+   
+    
+      $query2 = "UPDATE subscribe SET subscribed='no' WHERE subscribeEmail=$UNemail";
+
+        $statement2 = $db2->prepare($query2);
+
+        $statement2->bindValue(':UNemail', $UNemail, PDO::PARAM_STR);
+
+        $statement2->execute();
+
+        echo "<div>";
+        echo "You have been unsubscribed from the newsletter, sorry to see you go.";
+        echo "</div>";
+  }
+
+?>
+
+</div><!--end container div-->
 
 </body>
 
