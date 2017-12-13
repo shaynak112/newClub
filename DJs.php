@@ -1,6 +1,9 @@
-<?php
+<?php $pjGroup = "1";
+ include '/home/dh_ev2582/findersoftheuniverse.com/portal/test/scripts/app/views/pjLayouts/pjActionProtect.php'; ?>
 
-//include 'dbConnect.php';
+ <?php
+
+include 'dbConnect.php';
 include 'nav.php';
 include 'header.php';
 
@@ -14,28 +17,39 @@ include 'header.php';
 <p>Toronto has many talented and unique DJs who spin a variety of styles.</p>
 <p>this will be based on a database</p>
 
-<div id='djsDiv'>
+		<?php
 
-	<div class='oneDJDiv'>
-		<img src='djs/tickyty.jpg' class='oneDJImg'>
-	</div>
+            $dbconn = new Dbconnect;
+            $db = $dbconn->getDb();
+            $query = "SELECT * FROM DJs ORDER BY djID ASC ";
+            $statement = $db->prepare($query);
+            $statement->execute();
+            $allDJs = $statement->fetchAll(PDO::FETCH_OBJ);
+		?>
 
-	<div class='oneDJDiv'>
-		<img src='djs/quim.jpg' class='oneDJImg'>
-	</div>
+<div id='djsDiv' style='width:100%;'>
 
 
-</div>
 
-</div>
+	<?php
+		foreach($allDJs as $p)//displays newest models
+		{
+			echo "<div class='oneDJDiv' style='width:20%;margin-right:1%;display:inline-block;vertical-align:top;'>";
+			echo "<h2>" . $p->djName . "</h2>";
+			echo "<img class='firstImg' src='djs/" . $p->djID . "/img1.jpg' style='width:80%;margin-left:10%;'>";
+			//echo "<img class='secondImg' src='djs/" . $p->djID . "/img2.jpg'>";
+			echo "</div>";
+
+		}
+	?>
+
+
+</div> <!--end djsDiv-->
+
+</div> <!--end container-->
 
 
 
 </body>
 
-
-<?php
-
-	//include 'footer.php';
-
-?>
+</html>
