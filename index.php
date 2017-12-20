@@ -1,6 +1,9 @@
-<?php
+<?php $pjGroup = "1";
+ include '/home/dh_ev2582/findersoftheuniverse.com/portal/test/scripts/app/views/pjLayouts/pjActionProtect.php'; ?>
 
-//include 'dbConnect.php';
+ <?php
+
+include 'dbConnect.php';
 include 'nav.php';
 include 'header.php';
 
@@ -10,7 +13,7 @@ include 'header.php';
 <script src="scripts/jquery-3.2.1.js"></script>
 
 <div id='container'>
-<h1 style='visibility:none;display:none;'>Portal</h1>
+<h1 style='visibility:hidden;display:none;'>Portal</h1>
 
 <div id='homeBanner' class='divAnimate'>
 
@@ -31,7 +34,7 @@ include 'header.php';
 	<p>Friday nights (Saturday mornings) and Saturday nights (Sunday mornings) - 1 AM</p>
 	<p>Check back regularly for lineups, special events, etc. and follow us on social media</p>
 	<br/>
-	<p>Where will the music take you this time?</p>
+	<p style='font-size:1.3em;'>Where will the music take you this time?</p>
 	<div id='homeTechno' class='genres'>techno</div>
 	<div id='homeTechHouse' class='genres'>tech-house</div>
 	<div id='homeTribal' class='genres'>tribal</div>
